@@ -1,0 +1,127 @@
+1)Create a Scala program to reverse, and then format to upper case, the given
+
+code:
+
+object Interval {
+  def main(args: Array[String]) {
+    val str="https://www.google.com"
+    val revstr=str.reverse.toUpperCase()
+    println(s"output=$revstr")
+  }
+}
+
+2) Create a Scala program to output the following basic JSON notation.
+
+Code:
+
+object Interval {
+  def main(args: Array[String]) {
+      val donutName = "Vanilla Donut"
+      val quantityPurchased = 10
+      val price = 2.50
+      val donutJson =
+      s"""
+         |{
+         |"donut_name":"$donutName",
+         |"quantity_purchased":"$quantityPurchased",
+         |"price":$price
+         |}
+      """.stripMargin
+  println(donutJson)
+  }
+}
+
+3)Create a Scala program to prompt customers for their name and age. The format for the name and age labels should be in bold. And, the name literal should be underlined.
+
+code:
+
+    import scala.io.StdIn._
+    val name = readLine("Enter your name: ")
+    println("Enter your age: ")
+    val age = readInt()
+    println(Console.BOLD)
+    print("Name: ")
+    print(Console.UNDERLINED)
+    print(name)
+    println(Console.BOLD)
+    print("Age: ")
+    print(Console.RESET)
+    print(age)
+
+4)Create a Scala program to find the 8th character in the String: "http://www.google.com".
+
+code:
+
+object Interval {
+  def main(args: Array[String]) {
+     val str = "http://www.google.com"
+    val charToFind = str.charAt(7)
+    println(s"The 8th character literal in $str = $charToFind")
+  }
+}
+
+
+
+5)Create a Scala program to calculate the total cost for a customer who is buying 10 Glazed donuts. You can assume that the price of each Glazed donut item is at $2.50.
+ Notice the format of the $25.00 total cost literal, which is essentially at 2 decimal places.
+
+code:
+
+object Interval {
+  def main(args: Array[String]) {
+      val glazedDonut = "Glazed Donut"
+    val unitPrice = 2.50
+    val qtyPurchased = 10
+    val totalCost = qtyPurchased * unitPrice
+
+    println(f"""Total cost of $qtyPurchased $glazedDonut${if (qtyPurchased > 1) "s" else ""} = $$$totalCost%1.2f""")
+  }
+}
+
+6)Create a Scala program that will ask the following question to a customer: "What is your favorite movie of all times?".
+
+code:
+
+import scala.io.StdIn._
+object Interval {
+  def main(args: Array[String]) {
+     
+    val favoriteMovie = readLine("What is your favorite movie of all times?")
+    println(s"$favoriteMovie is totally awesome!")
+  }
+}
+
+7)Assume the following lexical coupon codes: "A", "BB", "CCC", "DDDD", "EEEEE". Write a Scala program to create a new set of coupon codes based on the above one.
+ The format for each coupon code should be as follows: "coupon code - i", where the number i is derived from the length of each corresponding coupon code.
+
+code:
+
+object Interval{
+    def main(args:Array[String]){
+        val coupons= Seq("A","BB","CCC","DDDD","EEEEE")
+        var count=0
+        for(i<-0 to 4){
+            var couponLen=coupons(i).length
+            var coupon=coupons(i)
+            println(s"$coupon - $couponLen")
+
+        }
+    }
+}
+
+8)Create a Scala program to represent a List with a sequence of number from 100 to 150.
+ You should omit the last numeric item of 150, and each numeric item should have a 10 numeric interval. You should then calculate the sum of all the numeric items in the List.
+
+Code:
+
+object Interval {
+  def main(args: Array[String]) {
+        val list=List.range(100,150,10)
+        val listSep=list.mkString(", ")
+        println(s"Elements of List from 100 to 150, Excluding 150 = $listSep")
+        println(s"sum of numbers ${list.sum}")
+  }
+}
+
+
+
